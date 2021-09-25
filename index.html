@@ -2,6 +2,25 @@
 <html lang="en">
 
 <head>
+    <script type="text/javascript">
+
+        var dob = new Date("10/18/1997");
+        //calculate month difference from current date in time  
+        var month_diff = Date.now() - dob.getTime();
+
+        //convert the calculated difference in date format  
+        var age_dt = new Date(month_diff);
+
+        //extract year from date      
+        var year = age_dt.getUTCFullYear();
+
+        //now calculate the age of the user  
+        var age = Math.abs(year - 1970);
+
+        function docWrite(age) {
+            document.write(age);
+        }
+    </script>
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
@@ -97,7 +116,10 @@
                                 <ul>
                                     <li><i class="icofont-rounded-right"></i> <strong>Birthday:</strong> 18 Oct 1997
                                     </li>
-                                    <li><i class="icofont-rounded-right"></i> <strong>Age:</strong> 23</li>
+                                    <li><i class="icofont-rounded-right"></i>
+                                        <strong>Age:</strong>
+                                        <script>docWrite(age)</script>
+                                    </li>
                                     <li><i class="icofont-rounded-right"></i> <strong>Phone:</strong> +91 9049329866
                                     </li>
                                     <li><i class="icofont-rounded-right"></i> <strong>City:</strong> Kolhapur, India
@@ -210,9 +232,9 @@
 
                 <div class="section-title">
                     <h2>Resume</h2>
-                    <button id="resumeDownload" onClick="openTab(this)" href="#"
-                        name="./assets/pdf/Resume.pdf">Download</button>
-
+                    <a href="./assets/pdf/Resume.pdf" target="_blank">View</a>
+                    <!-- <button id="resumeDownload" onClick="openTab(this)" href="#" 
+                        name="./assets/pdf/Resume.pdf">Download</button>-->
                 </div>
 
                 <div class="row">
@@ -237,8 +259,9 @@
                                 <li>+91 9049329866</li>
                                 <li>rhishichikhalkar21@gmail.com</li>
                             </ul> -->
+                            <a href="./assets/pdf/Cert.pdf" target="_blank">View</a>
                         </div>
-
+                        
                         <h3 class="resume-title">Education</h3>
                         <div class="resume-item">
                             <h4>Bachelor of Engineering ( Computer Science )</h4>
