@@ -1,6 +1,135 @@
-*__pycache__ 
-*.code 
-*.vscode 
-*.idea 
-*local_env 
-*venv
+# ==============================================================================
+# PROPRIETARY / PROJECT SPECIFIC
+# ==============================================================================
+# Sensitive credentials and local secrets
+.env
+.env.local
+.env.*.local
+secrets.dev.json
+credentials/gdrive.json
+*local_env
+
+# Custom project binaries or markers
+*.code
+*.bin
+*.exe
+
+# ==============================================================================
+# PYTHON (Industry Standard)
+# ==============================================================================
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.noseresults
+.pytest_cache/
+pytest_cache/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+
+# Virtual Environments
+venv/
+.venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Django specific
+local_settings.py
+db.sqlite3
+db.sqlite3-journal
+media/
+
+# Flask specific
+instance/
+.webassets-cache
+
+# ==============================================================================
+# REACT / NODE.JS (Industry Standard)
+# ==============================================================================
+# Dependencies
+node_modules/
+jspm_packages/
+
+# Production builds
+dist/
+build/
+out/
+.next/
+.nuxt/
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+
+# Misc / Tooling
+.eslintcache
+.stylelintcache
+.node_repl_history
+.cache/
+.nyc_output
+.parcel-cache
+.vfm-cache
+
+# ==============================================================================
+# IDE / EDITORS / OS
+# ==============================================================================
+# Standard IDEs
+.idea/
+*.swp
+*.swo
+*~
+*.sublime-project
+*.sublime-workspace
+
+# Operating System specific
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# App Specific
+cloudhub.db*
+cache/
+.vscode/
+.github/ (Only uncomment if you want to ignore CI/CD workflows/instructions)
