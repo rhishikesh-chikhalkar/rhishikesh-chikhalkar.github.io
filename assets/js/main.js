@@ -1,4 +1,4 @@
-!(function($) {
+!(function ($) {
     "use strict";
 
     // Hero typed
@@ -15,7 +15,7 @@
     }
 
     // Smooth scroll for the navigation menu and links with .scrollto classes
-    $(document).on('click', '.nav-menu a, .scrollto', function(e) {
+    $(document).on('click', '.nav-menu a, .scrollto', function (e) {
         if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
             e.preventDefault();
             var target = $(this.hash);
@@ -42,7 +42,7 @@
     });
 
     // Activate smooth scroll on page load with hash links in the url
-    $(document).ready(function() {
+    $(document).ready(function () {
         if (window.location.hash) {
             var initial_nav = window.location.hash;
             if ($(initial_nav).length) {
@@ -54,12 +54,12 @@
         }
     });
 
-    $(document).on('click', '.mobile-nav-toggle', function(e) {
+    $(document).on('click', '.mobile-nav-toggle', function (e) {
         $('body').toggleClass('mobile-nav-active');
         $('.mobile-nav-toggle i').toggleClass('icofont-navigation-menu icofont-close');
     });
 
-    $(document).click(function(e) {
+    $(document).click(function (e) {
         var container = $(".mobile-nav-toggle");
         if (!container.is(e.target) && container.has(e.target).length === 0) {
             if ($('body').hasClass('mobile-nav-active')) {
@@ -73,10 +73,10 @@
     var nav_sections = $('section');
     var main_nav = $('.nav-menu, .mobile-nav');
 
-    $(window).on('scroll', function() {
+    $(window).on('scroll', function () {
         var cur_pos = $(this).scrollTop() + 200;
 
-        nav_sections.each(function() {
+        nav_sections.each(function () {
             var top = $(this).offset().top,
                 bottom = top + $(this).outerHeight();
 
@@ -96,7 +96,7 @@
 
 
 
-    $('.back-to-top').click(function() {
+    $('.back-to-top').click(function () {
         $('html, body').animate({
             scrollTop: 0
         }, 1500, 'easeInOutExpo');
@@ -110,8 +110,8 @@
     });
 
     // Skills section
-    $('.skills-content').waypoint(function() {
-        $('.progress .progress-bar').each(function() {
+    $('.skills-content').waypoint(function () {
+        $('.progress .progress-bar').each(function () {
             $(this).css("width", $(this).attr("aria-valuenow") + '%');
         });
     }, {
@@ -128,8 +128,19 @@
             once: true
         });
     }
-    $(window).on('load', function() {
+    $(window).on('load', function () {
         aos_init();
+
+        // Calculate experience dynamically from Dec 2021
+        var startDate = new Date(2021, 11); // December 2021
+        var currentDate = new Date();
+        var diffYears = (currentDate - startDate) / (1000 * 60 * 60 * 24 * 365.25);
+        var display = diffYears.toFixed(1);
+
+        var expElement = document.getElementById('experience-years');
+        if (expElement) {
+            expElement.innerText = display + '+';
+        }
     });
 
 })(jQuery);
