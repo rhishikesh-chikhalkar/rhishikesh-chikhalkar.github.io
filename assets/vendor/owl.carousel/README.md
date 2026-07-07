@@ -119,4 +119,4 @@ Please make sure to check out our [Roadmap Discussion](https://github.com/OwlCar
 
 ## License
 
-The code and the documentation are released under the [MIT License](LICENSE).
+The code and the documentation are released under the [MIT](LICENSE).

@@ -131,5 +131,4 @@ Thumbs.db
 # App Specific
 cloudhub.db*
 cache/
-.vscode/
 .github/ (Only uncomment if you want to ignore CI/CD workflows/instructions)
